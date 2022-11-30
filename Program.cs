@@ -11,10 +11,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
 
-//Register Services
-builder.Services.AddScoped<IActorsService, ActorsService>();
+
 
 // Add services to the container.
+builder.Services.AddScoped<IActorsService, ActorsService>();
+builder.Services.AddScoped<IProducerService, ProducersService>();
+builder.Services.AddScoped<ICinemasService, CinemasService>();
+builder.Services.AddScoped<IMoviesService, MoviesService>();
+
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
