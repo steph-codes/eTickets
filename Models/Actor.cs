@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eTickets.Data.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
-    public class Actor
+    public class Actor: IEntityBase
     {
+        //you dont need the Id key since we are  inheriting from EntityBase, if you keep it it will be overriden
         [Key]
         public int Id { get; set; }
 

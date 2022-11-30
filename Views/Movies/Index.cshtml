@@ -53,7 +53,7 @@
 
                         </div>
                     </div>
-                    @*<div class="col-md-12">
+                    <div class="col-md-12">
                         <div class="card-footer ">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
@@ -66,11 +66,11 @@
                                 <i class="bi bi-cart-plus"></i> Add to Cart (Price @item.Price)</a>
                             </p>
                         </div>
-                    </div>*@
+                    </div>
                 </div>
             </div>
         </div>
     }
 </div>
 
-@*@await Html.PartialAsync("_CreateItem", "Movies") *@
+@await Html.PartialAsync("_CreateItem", "Movies") 
