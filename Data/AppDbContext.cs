@@ -1,4 +1,5 @@
 ﻿using eTickets.Models;
+using eTickets.Views.Movies;
 using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Data
@@ -32,5 +33,10 @@ namespace eTickets.Data
         public DbSet<Actor_Movie> Actor_Movies { get; set; }
         public DbSet<Producer> Producers { get; set; }
         public DbSet<Cinema> Cinemas { get; set; }
+
+        //Orders related tables
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace eTickets.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }
+        public double Cost { get; set; }
         public string ImageURL { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

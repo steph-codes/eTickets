@@ -23,8 +23,8 @@ namespace eTickets.Models
 
         [Display(Name = "Price in $")]
         [Required(ErrorMessage = "Price is required")]
-        public string Price { get; set; }
-        //public double Price { get; set; }
+        public double Cost { get; set; }
+        //public string Price { get; set; }
 
         [Display(Name = "Movie poster URL")]
         [Required(ErrorMessage = "Movie poster URL is required")]
