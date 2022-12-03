@@ -1,5 +1,7 @@
 using eTickets.Data;
+using eTickets.Data.Cart;
 using eTickets.Data.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,8 +20,12 @@ builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddScoped<IProducerService, ProducersService>();
 builder.Services.AddScoped<ICinemasService, CinemasService>();
 builder.Services.AddScoped<IMoviesService, MoviesService>();
+//configure Http context Accessor for session handling
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
 
-
+//configure or Add session then go the bottom add this 'app.UseSession()'  after routinh
+builder.Services.AddSession();
 
 builder.Services.AddControllersWithViews();
 
@@ -37,7 +43,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 
