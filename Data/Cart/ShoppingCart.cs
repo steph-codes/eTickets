@@ -23,9 +23,12 @@ namespace eTickets.Data.Cart
 
         public static ShoppingCart GetShoppingCart(IServiceProvider services)
         {
+            //checks if the session is not null
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
             var context = services.GetService<AppDbContext>();
 
+
+            //if session.String is null generates a new cartId
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
             session.SetString("CartId", cartId);
 
