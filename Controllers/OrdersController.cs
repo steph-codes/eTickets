@@ -2,7 +2,7 @@
 using eTickets.Data.Services;
 //using eTickets.Data.Static;
 using eTickets.Data.ViewModels;
-using Microsoft.AspNetCore.Authorization;
+//using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class OrdersController : Controller
     {
         private readonly IMoviesService _moviesService;
