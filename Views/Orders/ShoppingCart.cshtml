@@ -57,12 +57,12 @@
 
         <div class="text-right">
             <div class="btn-group">
-                @*<a class="btn btn-outline-primary" asp-action="CompleteOrder">
+               @* <a class="btn btn-outline-primary" asp-action="CompleteOrder">
                         Complete order
                     </a>*@
                 <div id="paypal-btn"></div>
                 <span style="padding:5px"></span>
-                <a class="btn btn-outline-success" asp-controller="Movies" asp-action="Index">
+                <a class="btn btn-success" asp-controller="Movies" asp-action="Index">
                     Add more items
                 </a>
             </div>
@@ -71,7 +71,7 @@
     </div>
 </div>
 
-@*@section Scripts{
+@section Scripts{
 
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
@@ -87,6 +87,7 @@
             },
 
             //Customize button
+
             locale: 'en_US',
             style: {
                 size: 'small',
@@ -117,4 +118,4 @@
 
         }, '#paypal-btn')
     </script>
-}*@
+}
