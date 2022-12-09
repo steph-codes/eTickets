@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eTickets.Views.Movies
+namespace eTickets.Models
 {
     public class Order
     {
