@@ -12,6 +12,7 @@
 
         <table class="table">
             <thead>
+                 @*we have inherited identity in ApplicationUser that's why we have accessto  Email and UserNamewhile FullName was taken from ApplicationUser*@
                 <tr class="text-center">
                     <th>@Html.DisplayNameFor(model => model.FullName)</th>
                     <th>@Html.DisplayNameFor(model => model.UserName)</th>
