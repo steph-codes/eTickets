@@ -21,31 +21,31 @@ namespace eTickets.Data
                     {
                         new Cinema()
                         {
-                            Name = "Cinema 1",
+                            Name = "IMAX",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
                             Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 2",
+                            Name = "Ozone",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
                             Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 3",
+                            Name = "SIlverbird",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
                             Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 4",
+                            Name = "Global",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
                             Description = "This is the description of the first cinema"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 5",
+                            Name = "FilmHouse",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
                             Description = "This is the description of the first cinema"
                         },
@@ -59,32 +59,32 @@ namespace eTickets.Data
                     {
                         new Actor()
                         {
-                            FullName = "Actor 1",
+                            FullName = "Peter Struijk",
                             Bio = "This is the Bio of the first actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
                         new Actor()
                         {
-                            FullName = "Actor 2",
+                            FullName = "Chris Tucker",
                             Bio = "This is the Bio of the second actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-2.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 3",
+                            FullName = "Angelina Jolie",
                             Bio = "This is the Bio of the second actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-3.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 4",
+                            FullName = "Matheus Cunan",
                             Bio = "This is the Bio of the second actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-4.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 5",
+                            FullName = "Will Smith",
                             Bio = "This is the Bio of the second actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg"
                         }
@@ -139,19 +139,21 @@ namespace eTickets.Data
                         {
                             Name = "Life",
                             Description = "This is the Life movie description",
-                            Price = "39.50",
+                            Cost = 39.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
                             CinemaId = 3,
                             ProducerId = 3,
-                            MovieCategory = MovieCategory.Documentary
+                            MovieCategory = MovieCategory.Docu
                         },
                         new Movie()
                         {
                             Name = "The Shawshank Redemption",
                             Description = "This is the Shawshank Redemption description",
-                            Price = "29.50",
+                            Cost = 29.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
@@ -163,7 +165,8 @@ namespace eTickets.Data
                         {
                             Name = "Ghost",
                             Description = "This is the Ghost movie description",
-                            Price = "39.50",
+                            Cost = 39.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
@@ -175,19 +178,21 @@ namespace eTickets.Data
                         {
                             Name = "Race",
                             Description = "This is the Race movie description",
-                            Price = "39.50",
+                            Cost = 39.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             CinemaId = 1,
                             ProducerId = 2,
-                            MovieCategory = MovieCategory.Documentary
+                            MovieCategory = MovieCategory.Docu
                         },
                         new Movie()
                         {
                             Name = "Scoob",
                             Description = "This is the Scoob movie description",
-                            Price = "39.50",
+                            Cost = 39.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
@@ -199,7 +204,8 @@ namespace eTickets.Data
                         {
                             Name = "Cold Soles",
                             Description = "This is the Cold Soles movie description",
-                            Price = "39.50",
+                            Cost = 39.0,
+                            Price ="",
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
@@ -210,6 +216,7 @@ namespace eTickets.Data
                     });
                     context.SaveChanges();
                 }
+
                 //Actors & Movies
                 if (!context.Actor_Movies.Any())
                 {
@@ -311,7 +318,6 @@ namespace eTickets.Data
                     });
                     context.SaveChanges();
                 }
-
 
             }
             

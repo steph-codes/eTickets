@@ -80,6 +80,8 @@ namespace eTickets.Controllers
             string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
 
             await _ordersService.StoreOrderAsync(items, userId, userEmailAddress);
+            
+            //clear shoppingcart after order completed
             await _shoppingCart.ClearShoppingCartAsync();
 
             return View("OrderCompleted");

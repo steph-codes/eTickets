@@ -23,7 +23,7 @@
                                     {
                                         <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                     }
-                                    <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                    @*<a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>*@
                                 </h5>
                             </p>
                         </div>
@@ -66,7 +66,7 @@
                                    asp-controller="Orders" 
                                    asp-action="AddItemToShoppingCart" 
                                    asp-route-id="@item.Id">
-                                <i class="bi bi-cart-plus"></i> Add to Cart (Price @item.Price)</a>
+                                <i class="bi bi-cart-plus"></i> Add to Cart (Price: $@item.Cost)</a>
                             </p>
                         </div>
                     </div>
